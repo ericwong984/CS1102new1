@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1102</title>
+    <style>
+        
+<!--copy navigation-->
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+            
+        }
+
+        .nav-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            justify-self: start;
+            align-self: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1a237e;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            background: #f5f5f5;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: #0072ce;
+        }
+
+        .nav-right {
+            justify-self: end;
+            align-self: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-brand {
+                margin-bottom: 1rem;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 1rem;
+                order: 2;
+            }
+
+            .nav-right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">VR Banking</div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="User Cases.html" class="nav-link">Use Cases</a></li>
+                <li><a href="tech.html" class="nav-link active">Technology</a></li>
+                <li><a href="inter.html" class="nav-link">Let's Try!</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+
+            <div class="nav-right"></div>
+        </div>
+    </nav>
+</body>
+</html>
+
+
+<html lang="zh-En">
+<head>
+    <meta charset="UTF-8">
+    <meta name="home" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body
+        
+        {
+            background-image: url('Tech.jpg');
+            background-size: cover;       
+            background-position: center;  
+            background-attachment: fixed; 
+            min-height: 100vh;            
+        }
+        
+        }
+
+
+.hero-section {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+                        url('Tech.jpg') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+    .hero-title {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            text-align: Left;
+            line-height: 1.2;
+            margin: 0 2rem;
+            background: linear-gradient(45deg, #00ff87, #60efff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(96,239,255,0.5);
+            animation: title-glow 2s ease-in-out infinite alternate;
+            position: relative;
+        }
+        @keyframes title-glow 
+    {
+            0% { text-shadow: 0 0 20px rgba(96,239,255,0.3); }
+            100% { text-shadow: 0 0 50px rgba(96,239,255,0.8); }
+        }
+    @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-title::after {
+                font-size: 1.2rem;
+                bottom: -1.8rem;
+            }
+        }
+    </style>
+</head>
+    
+<body>
+    <section class="hero-section">
+        <h1 class="hero-title">Technology Deep Dive</h1>
+        </section>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-blue: #38bdf8;
+            --tech-card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: var(--primary-color);
+            color: white;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 3rem 0;
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tech-card {
+            background: var(--tech-card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            position: relative;
+            height: 200px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #0f172a, #1e293b);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .card-desc {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .image-label {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(0,0,0,0.7);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+        }
+
+        .hardware-section {
+            margin-top: 4rem;
+            border-top: 2px solid #334155;
+            padding-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <h2 class="section-title">Key Technology in VR  Banking</h2>
+    <div class="tech-grid">
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="image7.png" alt="Blockchain" class="card-image">
+            </div>
+            <h3 class="card-title">Blockchain</h3>
+            <p class="card-desc">
+                Secures digital transactions and assets, ensuring trust in virtual environments
+            </p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="image12.png" alt="AI" class="card-image">
+            </div>
+            <h3 class="card-title">AI</h3>
+            <p class="card-desc">
+                Personalizes financial advice, detects fraud, and powers virtual assistants
+            </p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="image19.png" alt="5G" class="card-image">
+            </div>
+            <h3 class="card-title">5G</h3>
+            <p class="card-desc">
+                Enables fast, low-latency connections for seamless VR experiences  
+            </p>
+        </div>
+
+        <div class="tech-card">
+            <div class="card-header">
+                <img src="image5.png" alt="Haptic feedback" class="card-image">
+            </div>
+            <h3 class="card-title">Haptic feedback</h3>
+            <p class="card-desc">
+                Simulates touch, enhancing interactions like signing virtual documents.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="hardware-section">
+        <h2 class="section-title">Hardware</h2>
+        <div class="tech-grid">
+            <!-- Oculus Rift -->
+            <div class="tech-card">
+                <div class="card-header">
+                    <img src="image9.png" alt="Oculus Rift" class="card-image">
+                </div>
+                <h3 class="card-title">Oculus Rift</h3>
+                <p class="card-desc">
+                    Early VR headset for immersive banking simulations.
+                </p>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-header">
+                    <img src="image22.png" alt="Meta Quest Pro" class="card-image">
+                </div>
+                <h3 class="card-title">Meta Quest Pro</h3>
+                <p class="card-desc">
+                    Advanced VR headset with enhanced visuals and tracking for virtual branches.
+                </p>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-header">
+                    <img src="image6.png" alt="AR glasses" class="card-image">
+                </div>
+                <h3 class="card-title">AR glasses</h3>
+                <p class="card-desc">
+                    Overlay financial data in real-world settings, ideal for mobile banking.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Just use the origin design-->
+        <!--New section-->
+    
+        <div class="hardware-section">
+        <h2 class="section-title">Future development and prediction</h2>
+        <div class="tech-grid">
+            <!-- Oculus Rift -->
+            <div class="tech-card">
+                <div class="card-header">
+                    <img src="image4.png" alt="Decentralized finance (DeFi) in the Metaverse" class="card-image">
+                </div>
+                <h3 class="card-title">Decentralized finance (DeFi) in the Metaverse</h3>
+                <p class="card-desc">
+                    This will grow to $37 billion 2028, enabling virtual banking, trading, and AI-driven financial tools with 5G support. MetaFi will standardize assets for cross-platform use.
+                </p>
+            </div>
+
+                <div class="tech-card">
+                <div class="card-header">
+                    <img src="image17.png" alt="Meta Quest Pro" class="card-image">
+                </div>
+                <h3 class="card-title">Ethical debates</h3>
+                <p class="card-desc">
+                    Ethical debates arise: decentralized digital identities risk privacy, AI biases may skew services, and unregulated virtual economies face fraud concerns. By 2030, DeFi could transform banking, but resolving privacy and regulatory challenges is critical.
+                </p>
+            </div>
+       
+</body>
+</html>
