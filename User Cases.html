@@ -1,0 +1,524 @@
+<html lang="zh-EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .content-section {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .split-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .image-content {
+            flex: 1;
+            position: relative;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #1a237e;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 80%;
+            background: #0072ce;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .feature-item::before {
+            content: '▶';
+            color: #0072ce;
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .split-layout {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .text-content {
+                padding: 1rem;
+                order: 2;
+            }
+
+            .image-content {
+                order: 1;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="content-section">
+        <div class="split-layout">
+            <div class="text-content">
+                <h2 class="section-title">Customer Service </h2>
+                <p class="description">AR technology creates virtual tour guides, allowing clients to receive guidance and services remotely. </p>
+                <ul class="feature-list">
+                    <li class="feature-item"> The National Bank of Oman provides AR services that help clients find the nearest ATM or branch. </li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="image18.png" alt="Bank">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" style="background: #fff;">
+        <div class="split-layout">
+            <div class="image-content">
+                <img src="image26.png" alt="ET">
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">Employee training</h2>
+                <p class="description">Virtual environments simulate real-world banking scenarios, training staff on customer service, fraud detection, or compliance efficiently and cost-effectively. </p>
+                <ul class="feature-list">
+                    <li class="feature-item">Bank of America launched a VR training program in nearly 4,300 financial centers.</li>
+                    <li class="feature-item">Allowing around 50,000 employees to practice complex tasks and client interactions.  .</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="split-layout">
+            <div class="text-content">
+                <h2 class="section-title">Events </h2>
+                <p class="description">Banks host virtual conferences, product launches, or investor meetings in the Metaverse, enabling global participation and engaging experiences without physical venues.</p>
+                <ul class="feature-list">
+                    <li class="feature-item"> JPMorgan Chase held an event called DEVUP 2024. </li>
+                    <li class="feature-item"> Used Metaverse technology to allow college graduates to interact with different senior executives from global branches. </li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="image21.png" alt="Events">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" style="background: #fff;">
+        <div class="split-layout">
+            <div class="image-content">
+                <img src="image13.png" alt="ET">
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">Education</h2>
+                <p class="description">VR/Metaverse platforms provide immersive financial literacy programs, using interactive simulations to teach budgeting, investing, or loan management, enhancing customer understanding.</p>
+                <ul class="feature-list">
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="split-layout">
+            <div class="text-content">
+                <h2 class="section-title">Financial advisory </h2>
+                <p class="description">VR offers personalized, face-to-face advisory sessions in virtual branches.</p>
+                <ul class="feature-list">
+                    <li class="feature-item"> Allowing clients to interactively explore investment options or retirement plans</li>
+                    <li class="feature-item"> Improving trust and accessibility. </li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="image12.png" alt="FA">
+            </div>
+        </div>
+    </section>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1102</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+            
+        }
+
+        .nav-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            justify-self: start;
+            align-self: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1a237e;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            background: #f5f5f5;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: #0072ce;
+        }
+
+        .nav-right {
+            justify-self: end;
+            align-self: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-brand {
+                margin-bottom: 1rem;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 1rem;
+                order: 2;
+            }
+
+            .nav-right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">VR Banking</div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="User Cases.html" class="nav-link active">Use Cases</a></li>
+                <li><a href="tech.html" class="nav-link">Technology</a></li>
+                <li><a href="inter.html" class="nav-link">Let's Try!</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+
+            <div class="nav-right"></div>
+        </div>
+    </nav>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&C</title>
+    <style>
+
+        body {
+            padding-top: 120px;
+        }
+
+        .filter-btn[data-filter="benefit"] {
+            color: #1d4ed8;
+            font-weight: 600;
+        }
+        .filter-btn[data-filter="benefit"]::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background: #1d4ed8;
+            border-radius: 2px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            padding: 2rem;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 1rem 3rem;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            color: #6b7280;
+            transition: all 0.3s ease;
+        }
+        
+        
+        .filter-btn.active {
+            color: #1d4ed8;
+            font-weight: 600;
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background: #1d4ed8;
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .content-card.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card-title {
+            color: #1f2937;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #1d4ed8;
+            display: inline-block;
+        }
+
+        .card-text {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .learn-more {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s;
+        }
+
+        .learn-more:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Factors</button>
+        <button class="filter-btn" data-filter="benefit">Benefit</button>
+        <button class="filter-btn" data-filter="challenge">Challenge</button>
+    </div>
+
+    <div class="content-grid">
+        <div class="content-card benefit">
+            <h2 class="card-title">Enhance customer experience</h2>
+            <p class="card-text">Immersive virtual branches enable 24/7 personalized banking.</p>
+            <a href="#" class="learn-more">Get More Information →</a>
+        </div>
+
+        <div class="content-card benefit">
+            <h2 class="card-title">Cost efficiency</h2>
+            <p class="card-text">Cuts branched costs, streamlines VR training. </p>
+            <a href="#" class="learn-more">Get More Information →</a>
+        </div>
+
+        <div class="content-card benefit">
+            <h2 class="card-title">Innovation</h2>
+            <p class="card-text">Supports digital assets, blockchain transactions. </p>
+            <a href="#" class="learn-more">Get More Information →</a>
+        </div>
+
+        <div class="content-card benefit">
+            <h2 class="card-title">Reach</h2>
+            <p class="card-text">Expands global access. </p>
+            <a href="#" class="learn-more">Get More Information →</a>
+        </div>
+
+        <!-- Challenge 内容 -->
+        <div class="content-card challenge">
+            <h2 class="card-title">Security</h2>
+            <p class="card-text">Data breach risk in virtual platforms. </p>
+            <a href="#" class="learn-more">LEARN MORE →</a>
+        </div>
+
+        <div class="content-card challenge">
+            <h2 class="card-title">Infrastructure Costs</h2>
+            <p class="card-text">High VR/Metaverse development expenses.</p>
+            <a href="#" class="learn-more">LEARN MORE →</a>
+        </div>
+
+        <div class="content-card challenge">
+            <h2 class="card-title">Access</h2>
+            <p class="card-text">VR hardware, internet limits adoption.</p>
+            <a href="#" class="learn-more">LEARN MORE →</a>
+        </div>
+
+        <div class="content-card challenge">
+            <h2 class="card-title">Regulation</h2>
+            <p class="card-text">Unclear rules for digital transactions.</p>
+            <a href="#" class="learn-more">LEARN MORE →</a>
+        </div>   
+    </div>
+<script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const contentCards = document.querySelectorAll('.content-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                contentCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+   <footer class="page-footer">
+    <div class="footer-content">
+        CS1102 - Course Project - 2024/2025 Semester B<br>
+        Development of Virtual Reality and Metaverse in the Future of Banking<br>
+        Developed by: 
+        Chan Yin Yu (57847246), 
+        Cheung Tsz Hei (58127726), 
+        Lau Yiu Ming (57151464), 
+        Wong Wing Yeung (57849891)
+    </div>
+</footer> 
+</body>
+</html>
